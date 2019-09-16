@@ -1,7 +1,7 @@
-Feature: Login into losestudiantes
-    As an user I want to authenticate myself within losestudiantes website in order to rate teachers
+Feature: Register into losestudiantes
+    As an user I want to register myself within losestudiantes website in order to rate teachers
 
-Scenario Outline: Login failed with wrong inputs
+Scenario Outline: Register failed with wrong inputs
 
   Given I go to losestudiantes home screen
     When I open the login screen
@@ -14,7 +14,7 @@ Scenario Outline: Login failed with wrong inputs
       |                  |          | Ingresa una contraseña   |
       | miso@gmail.com   |    1234  | Upss! El correo y        |
 
-Scenario Outline: Login successful
+Scenario Outline: Register successful
     Given I go to losestudiantes home screen
     When I open the login screen
     And I fill with <email> and <password>
