@@ -15,7 +15,7 @@ Scenario Outline: Login failed with wrong inputs
       | miso@gmail.com   |    1234  | Upss! El correo y        |
 
 Scenario Outline: Login successful
-    Given I go to losestudiantes home screen
+  Given I go to losestudiantes home screen
     When I open the login screen
     And I fill with <email> and <password>
     And I try to login

@@ -47,6 +47,39 @@ defineSupportCode(({Given, When, Then}) => {
    passwordInput.keys(password)
 });
 
+When(/^I fill the register form with (.*) and (.*) and (.*) and (.*) and (.*) and (.*) and (.*)$/ , (firstName, lastName, email, university, master, undergraduate, password) => {
+    var cajaSignUp = browser.element('.cajaSignUp');
+
+   var firstNameInput = cajaSignUp.element('input[name="nombre"]');
+   firstNameInput.click(); 
+   firstNameInput.keys(firstName); 
+
+   var lastNameInput = cajaSignUp.element('input[name="apellido"]');
+   lastNameInput.click(); 
+   lastNameInput.keys(lastName); 
+
+   var emailInput = cajaSignUp.element('input[name="correo"]');
+   emailInput.click(); 
+   emailInput.keys(email); 
+
+   var universityInput = cajaSignUp.element('select[name="idUniversidad"]');
+   universityInput.click();
+   var option = universityInput.element('option='+university);
+   option.click();
+
+//    var undergraduateCheckbox = cajaSignUp.element('input[type="checkbox"]');
+//    undergraduateCheckbox.click(); 
+
+   var undergraduateInput = cajaSignUp.element('select[name="idPrograma"]');
+   undergraduateInput.click();
+   undergraduateInput.element('option='+undergraduate).click();
+
+   var passwordInput = cajaSignUp.element('input[name="password"]');
+   passwordInput.click(); 
+   passwordInput.keys(password); 
+ 
+}); 
+
    Then('I expect to see {string}', 
     error => {
         browser.waitForVisible('.aviso.alert.alert-danger', 5000);

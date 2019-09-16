@@ -5,22 +5,11 @@ Scenario Outline: Register failed with wrong inputs
 
   Given I go to losestudiantes home screen
     When I open the login screen
-    And I fill with <email> and <password>
-    And I try to login
-    Then I expect to see <error>
+    And I fill the register form with <firstName> and <lastName> and <email> and <university> and <master> and <undergraduate> and <password>
 
     Examples:
-      | email            | password | error                    |
-      |                  |          | Ingresa una contraseña   |
-      | miso@gmail.com   |    1234  | Upss! El correo y        |
+      | firstName          | lastName            | email               | university           | master                 | undergraduate          | password |
+      | Rafael             | Bermúdez            | raf_berm2@yahoo.com | Universidad Nacional | Ingeniería de Software | Ingeniería Electrónica | 123456   | 
 
-Scenario Outline: Register successful
-    Given I go to losestudiantes home screen
-    When I open the login screen
-    And I fill with <email> and <password>
-    And I try to login
-    Then I expect to see the cuenta menu
 
-    Examples:
-      | email               | password            |
-      | raf_berm2@yahoo.com | test123456          |
+
