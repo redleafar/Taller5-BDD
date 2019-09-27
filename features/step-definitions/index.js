@@ -63,16 +63,13 @@ When(/^I fill the register form with (.*) and (.*) and (.*) and (.*) and (.*) an
    emailInput.keys(email); 
 
    var universityInput = cajaSignUp.element('select[name="idUniversidad"]');
-   universityInput.click();
-   var option = universityInput.element('option='+university);
-   option.click();
+   
+   cajaSignUp.element('option="Universidad Nacional"').click();
+   
 
 //    var undergraduateCheckbox = cajaSignUp.element('input[type="checkbox"]');
 //    undergraduateCheckbox.click(); 
 
-   var undergraduateInput = cajaSignUp.element('select[name="idPrograma"]');
-   undergraduateInput.click();
-   undergraduateInput.element('option='+undergraduate).click();
 
    var passwordInput = cajaSignUp.element('input[name="password"]');
    passwordInput.click(); 

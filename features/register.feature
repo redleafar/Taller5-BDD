@@ -10,6 +10,3 @@ Scenario Outline: Register failed with wrong inputs
     Examples:
       | firstName          | lastName            | email               | university           | master                 | undergraduate          | password |
       | Rafael             | Bermúdez            | raf_berm2@yahoo.com | Universidad Nacional | Ingeniería de Software | Ingeniería Electrónica | 123456   | 
-
-
-

@@ -24,3 +24,7 @@ Scenario Outline: Login successful
     Examples:
       | email               | password            |
       | raf_berm2@yahoo.com | test123456          |
+
+
+
+
